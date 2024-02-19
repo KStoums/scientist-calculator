@@ -59,22 +59,10 @@ function calculate() {
 function specialCalculate(calculateType) {
     let calculationString = calculation.join("");
 
-    if (calculateType === "sqrt" || calculateType === "asin" || calculateType === "acos" ||
-        calculateType === "atan" || calculateType === "sin" || calculateType === "cos" || calculateType === "tan") {
-        const calculateString = calculate();
-        try {
-            result = operation[calculateType](calculateString);
-            resultElement.textContent = result;
-            calculationElement.textContent = calculateType + "(" + calculationString + ")"
-        } catch (error) {
-            sendMessage("ERROR");
-        }
-        return;
-    }
-
     try {
-        result = operation[calculateType](calculationString);
+        result = operation[calculateType](eval(calculationString));
         resultElement.textContent = result;
+        calculationElement.textContent = calculateType + "(" + calculationString + ")"
     } catch (error) {
         sendMessage("ERROR");
     }
