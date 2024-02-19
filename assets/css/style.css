@@ -54,7 +54,7 @@ main #calculation {
 
 main #result {
     padding: 5px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 main .calculator-keyboard-1 {
@@ -103,4 +103,8 @@ main .lightblue {
 
 main .red {
     background-color: red;
+}
+
+main .double-button {
+    width: 200px;
 }

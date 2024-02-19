@@ -35,7 +35,7 @@ function calculate() {
         result = math.evaluate(calculationString);
         resultElement.textContent = result;
     } catch (error) {
-        sendError();
+        sendMessage("ERROR");
     }
 }
 
@@ -46,7 +46,7 @@ function hexCalculate() {
         result = math.hex(calculationString);
         resultElement.textContent = result.substring(2);
     } catch (error) {
-        sendError();
+        sendMessage("ERROR");
     }
 }
 
@@ -57,7 +57,7 @@ function decCalculate() {
         result = math.floor(calculationString);
         resultElement.textContent = result;
     } catch (error) {
-        sendError();
+        sendMessage("ERROR");
     }
 }
 
@@ -68,7 +68,7 @@ function octCalculate() {
         result = math.oct(calculationString);
         resultElement.textContent = result.substring(2);
     } catch (error) {
-        sendError();
+        sendMessage("ERROR");
     }
 }
 
@@ -79,7 +79,7 @@ function binCalculate() {
         result = math.bin(calculationString);
         resultElement.textContent = result.substring(2);
     } catch (error) {
-        sendError();
+        sendMessage("ERROR");
     }
 }
 
@@ -90,7 +90,7 @@ function degCalculate() {
         result = math.tan(calculationString);
         resultElement.textContent = result;
     } catch (error) {
-        sendError();
+        sendMessage("ERROR");
     }
 }
 
@@ -103,13 +103,91 @@ function sqrtCalculate() {
         resultElement.textContent = result;
         calculationElement.textContent = "√("+ calculationString + ")"
     } catch (error) {
-        sendError();
+        sendMessage("ERROR");
     }
 }
 
-function sendError() {
-    calculationElement.textContent = "ERROR";
-    resultElement.textContent = "ERROR";
+function asinCalculate() {
+    let calculationString = calculation.join("");
+
+    try {
+        const calculationResult = math.evaluate(calculationString);
+        result = math.asin(calculationResult);
+        resultElement.textContent = result;
+        calculationElement.textContent = "asin("+ calculationString + ")"
+    } catch (error) {
+        sendMessage("ERROR");
+    }
+}
+
+function acosCalculate() {
+    let calculationString = calculation.join("");
+
+    try {
+        const calculationResult = math.evaluate(calculationString);
+        result = math.acos(calculationResult);
+        resultElement.textContent = result;
+        calculationElement.textContent = "acos("+ calculationString + ")"
+    } catch (error) {
+        sendMessage("ERROR");
+    }
+}
+
+function atanCalculate() {
+    let calculationString = calculation.join("");
+
+    try {
+        const calculationResult = math.evaluate(calculationString);
+        result = math.atan(calculationResult);
+        resultElement.textContent = result;
+        calculationElement.textContent = "atan("+ calculationString + ")"
+    } catch (error) {
+        sendMessage("ERROR");
+    }
+}
+
+function sinCalculate() {
+    let calculationString = calculation.join("");
+
+    try {
+        const calculationResult = math.evaluate(calculationString);
+        result = math.sin(calculationResult);
+        resultElement.textContent = result;
+        calculationElement.textContent = "sin("+ calculationString + ")"
+    } catch (error) {
+        sendMessage("ERROR");
+    }
+}
+
+function cosCalculate() {
+    let calculationString = calculation.join("");
+
+    try {
+        const calculationResult = math.evaluate(calculationString);
+        result = math.cos(calculationResult);
+        resultElement.textContent = result;
+        calculationElement.textContent = "cos("+ calculationString + ")"
+    } catch (error) {
+        sendMessage("ERROR");
+    }
+}
+
+function tanCalculate() {
+    let calculationString = calculation.join("");
+
+    try {
+        const calculationResult = math.evaluate(calculationString);
+        result = math.tan(calculationResult);
+        resultElement.textContent = result;
+        calculationElement.textContent = "tan("+ calculationString + ")"
+    } catch (error) {
+        sendMessage("ERROR");
+    }
+}
+
+function sendMessage(message) {
+    calculationElement.textContent = message;
+    resultElement.textContent = message;
     setTimeout(() => {
         clearCalculate();
     }, 1000)
