@@ -42,9 +42,9 @@ main .calculator-block-screen {
     align-items: flex-end;
     height: 10%;
     width: 100%;
-    background-color: gray;
+    background-color: #F3F4F6;
     border-radius: 5px;
-    color: white;
+    color: black;
 }
 
 main #calculation {
