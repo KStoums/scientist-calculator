@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Kode Mono", monospace;
+    text-decoration: none;
+}
+
+main h1 {
+    color: white;
+}
+
+main a {
+    margin: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1F2025;
+}
+
+main .calculator-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    height: 750px;
+    width: 500px;
+}
+
+main .calculator-block-screen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 10%;
+    width: 100%;
+    background-color: gray;
+    border-radius: 5px;
+    color: white;
+}
+
+main #calculation {
+    padding: 5px;
+    font-size: 15px;
+}
+
+main #result {
+    padding: 5px;
+    font-size: 25px;
+}
+
+main .calculator-keyboard-1 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 30px;
+    height: 10%;
+    width: 100%;
+}
+
+main .calculator-keyboard-2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 70%;
+    width: 100%;
+}
+
+main .calculator-button {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+main .blue {
+    background-color: cornflowerblue;
+}
+
+main .gray {
+    background-color: lightslategray;
+}
+
+main .lightblue {
+    background-color: skyblue;
+}
+
+main .red {
+    background-color: red;
+}
